@@ -109,36 +109,46 @@ def testing_all_models(models_dir, test_loader, results_file):
             f1 = 2 * (precision * recall) / (precision + recall)
             
             results_row = {'model name': model,
-                              'ND TP': tp[2],
-                              'ND FP': fp[2],
-                              'ND TN': tn[2],
-                              'ND FN': fn[2],
-                              'ND accuracy': acc[2],
-                              'ND sensitivity - recall': sensitivity[2],
-                              'ND specificity': specificity[2],
-                              'ND precision': precision[2],
-                              'ND recall': recall[2],
-                              'ND f1 score': f1[2],
-                              'LG TP': tp[1],
-                              'LG FP': fp[1],
-                              'LG TN': tn[1],
-                              'LG FN': fn[1],
-                              'LG accuracy': acc[1],
-                              'LG sensitivity': sensitivity[1],
-                              'LG specificity': specificity[1],
-                              'LG precision': precision[1],
-                              'LG recall': recall[1],
-                              'LG f1 score': f1[1],
-                              'HG TP': tp[0],
-                              'HG FP': fp[0],
-                              'HG TN': tn[0],
-                              'HG FN': fn[0],
-                              'HG accuracy': acc[0],
-                              'HG sensitivity': sensitivity[0],
-                              'HG specificity': specificity[0],
-                              'HG precision': precision[0],
-                              'HG recall': recall[0],
-                              'HG f1 score': f1[0]
+                              'Class 1 TP': tp[0],
+                              'Class 1 FP': fp[0],
+                              'Class 1 TN': tn[0],
+                              'Class 1 FN': fn[0],
+                              'Class 1 accuracy': acc[0],
+                              'Class 1 sensitivity - recall': sensitivity[0],
+                              'Class 1 specificity': specificity[0],
+                              'Class 1 precision': precision[0],
+                              'Class 1 recall': recall[0],
+                              'Class 1 f1 score': f1[0],
+                              'Class 2 TP': tp[1],
+                              'Class 2 FP': fp[1],
+                              'Class 2 TN': tn[1],
+                              'Class 2 FN': fn[1],
+                              'Class 2 accuracy': acc[1],
+                              'Class 2 sensitivity': sensitivity[1],
+                              'Class 2 specificity': specificity[1],
+                              'Class 2 precision': precision[1],
+                              'Class 2 recall': recall[1],
+                              'Class 2 f1 score': f1[1],
+                              'Class 3 TP': tp[2],
+                              'Class 3 FP': fp[2],
+                              'Class 3 TN': tn[2],
+                              'Class 3 FN': fn[2],
+                              'Class 3 accuracy': acc[2],
+                              'Class 3 sensitivity': sensitivity[2],
+                              'Class 3 specificity': specificity[2],
+                              'Class 3 precision': precision[2],
+                              'Class 3 recall': recall[2],
+                              'Class 3 f1 score': f1[2],
+                              'Class 4 TP': tp[3],
+                              'Class 4 FP': fp[3],
+                              'Class 4 TN': tn[3],
+                              'Class 4 FN': fn[3],
+                              'Class 4 accuracy': acc[3],
+                              'Class 4 sensitivity': sensitivity[3],
+                              'Class 4 specificity': specificity[3],
+                              'Class 4 precision': precision[3],
+                              'Class 4 recall': recall[3],
+                              'Class 4 f1 score': f1[3]
                               }
                
             print(results_row)
@@ -153,9 +163,9 @@ def testing_all_models(models_dir, test_loader, results_file):
     
 models_dir = "C:\\Users\\PATH\\saved_models"
 
-root_dir = "D:\\PhD\\PATH\\Testing"
+root_dir = "D:\\PATH\\Testing"
 
-results_file = "C:\\Users\\PATH\\MuAc_all_models_test_results.xlsx"
+results_file = "C:\\Users\\PATH\\all_models_test_results.xlsx"
 
 # Define image preprocessing
 preprocess = transforms.Compose([transforms.Resize((299,299), interpolation = Image.BICUBIC),
